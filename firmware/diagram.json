@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "IV Infiltration Monitoring Project",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp",       "top": 0,   "left": -20,  "attrs": {} },
+    { "type": "wokwi-ds18b20",         "id": "temp1",     "top": -60, "left": 220,  "attrs": {} },
+    { "type": "wokwi-potentiometer",   "id": "fsr_proxy", "top": 40,  "left": 220,  "attrs": {} },
+    { "type": "wokwi-led",             "id": "alert_led", "top": 140, "left": 220,  "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor",        "id": "r_led",     "top": 140, "left": 300,  "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor",        "id": "r_pullup",  "top": -100,"left": 150,  "attrs": { "value": "4700" } }
+  ],
+  "connections": [
+    [ "esp:3V3",  "temp1:VCC",       "red",   [] ],
+    [ "esp:GND.1","temp1:GND",       "black", [] ],
+    [ "esp:D4",   "temp1:DQ",        "green", [] ],
+    [ "esp:3V3",  "r_pullup:1",      "red",   [] ],
+    [ "r_pullup:2","temp1:DQ",       "green", [] ],
+
+    [ "esp:3V3",  "fsr_proxy:VCC",   "red",   [] ],
+    [ "esp:GND.2","fsr_proxy:GND",   "black", [] ],
+    [ "esp:D34",  "fsr_proxy:SIG",   "blue",  [] ],
+
+    [ "esp:D2",   "r_led:1",         "yellow",[] ],
+    [ "r_led:2",  "alert_led:A",     "yellow",[] ],
+    [ "alert_led:C","esp:GND.3",     "black", [] ]
+  ]
+}
