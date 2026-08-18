@@ -23,6 +23,12 @@
 
     [ "esp:D2",   "r_led:1",         "yellow",[] ],
     [ "r_led:2",  "alert_led:A",     "yellow",[] ],
-    [ "alert_led:C","esp:GND.3",     "black", [] ]
-  ]
+    [ "alert_led:C","esp:GND.3",     "black", [] ],
+
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "$serialMonitor:TX", "esp:RX0", "", [] ]
+  ],
+  "serialMonitor": {
+  "display": "always"
+  }
 }
