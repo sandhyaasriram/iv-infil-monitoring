@@ -62,8 +62,9 @@ def build_labeled_dataframe(n_per_class=50, seed=42):
                 "temperature_c": temp_sensor[i],
                 "pressure_adc": press_sensor[i],
                 "condition": condition,
-                "severity": trial["severity"],
-                "label": trial["label"],
+                "severity": trial["severity"],          # trial's nominal class (static, legacy)
+                "label": trial["dynamic_label"][i],       # USE THIS: per-timestep, volume-based label
+                "_static_label_GT": trial["label"],       # old trial-level label, kept for comparison only
                 # Ground-truth columns kept ONLY for your own analysis/plots.
                 # Prefix with underscore as a visual reminder: never select
                 # these as ML input features (project Section 2.16).

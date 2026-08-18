@@ -6,10 +6,27 @@ sensors/noise.py, kept separate so the ideal physics and the sensor emulation
 can be validated independently.
 """
 import numpy as np
-from simulator.parameters import QL_RANGE, SEVERITY_LABELS, DURATION_S, DT
+from simulator.parameters import (
+    QL_RANGE, SEVERITY_LABELS, VOLUME_LABEL_THRESHOLDS, DURATION_S, DT,
+)
 from simulator.infusion import simulate_leaked_volume
 from simulator.tissue import simulate_pressure_ideal
 from simulator.thermal import simulate_temperature
+
+
+def label_from_volume(vl):
+    """
+    Per-timestep label from ACCUMULATED VOLUME, not trial identity.
+    A window at t=0 in a "severe" trial has ~0 mL leaked and correctly reads
+    as "none" here; the label only advances once volume crosses a threshold.
+    """
+    if vl >= VOLUME_LABEL_THRESHOLDS["severe"]:
+        return SEVERITY_LABELS["severe"]
+    elif vl >= VOLUME_LABEL_THRESHOLDS["moderate"]:
+        return SEVERITY_LABELS["moderate"]
+    elif vl >= VOLUME_LABEL_THRESHOLDS["early"]:
+        return SEVERITY_LABELS["early"]
+    return SEVERITY_LABELS["none"]
 
 
 def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None):
@@ -22,6 +39,10 @@ def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None):
     P_ideal = simulate_pressure_ideal(VL)
     T_ideal = simulate_temperature(ql_rate, duration_s, dt)
 
+    # Per-timestep dynamic labels (fixes the none/early boundary bias) --
+    # kept alongside the old trial-level label for comparison/analysis.
+    dynamic_labels = np.array([label_from_volume(v) for v in VL])
+
     return {
         "time": t,
         "temperature_ideal": T_ideal,
@@ -30,8 +51,9 @@ def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None):
         # NEVER feed these to the ML model (project Section 2.16).
         "leak_rate_mlph": ql_rate,
         "leaked_volume_ml": VL,
-        "severity": severity,
-        "label": SEVERITY_LABELS[severity],
+        "severity": severity,               # trial's nominal class (old, static)
+        "label": SEVERITY_LABELS[severity], # old static label -- kept for reference
+        "dynamic_label": dynamic_labels,    # NEW: per-timestep label, use this one
     }
 
 
