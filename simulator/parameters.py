@@ -3,7 +3,7 @@ Global physical and sensor parameters for the IV infiltration simulator (V1).
 
 IMPORTANT: these are documented starting assumptions, NOT calibrated physiological
 constants. Every value marked (TUNE) should be recalibrated once you have real
-phantom-arm data (Step 8-10 of the project plan). State this explicitly in the paper.
+phantom-arm data (Step 8-10 of the project plan).
 """
 
 # --- Time settings ---
@@ -21,16 +21,23 @@ QL_RANGE = {
 }
 
 # --- Tissue swelling model (V1: LINEAR, per spec) ---
-KS = 0.02     # swelling sensitivity: mm deformation per mL leaked                    (TUNE)
-KP = 5.0      # pressure sensor gain: ADC-equivalent counts per mm swelling            (TUNE)
-P0 = 50.0     # baseline FSR reading at rest, ADC-equivalent counts                    (TUNE)
+#Trial 0 
+# KS = 0.02     # swelling sensitivity: mm deformation per mL leaked                    (TUNE)
+# KP = 5.0      # pressure sensor gain: ADC-equivalent counts per mm swelling            (TUNE)
+# P0 = 50.0     # baseline FSR reading at rest, ADC-equivalent counts                    (TUNE)
+
+#Trial 1
+KS = 0.08     # increased swelling sensitivity 
+KP = 15.0     # increased pressure sensor gain
+P0 = 50.0     # baseline - retained 
 
 # --- Thermal model (V1: 0D LUMPED, per spec) ---
 TA = 25.0     # ambient temperature, deg C
 T0 = 33.0     # initial SKIN-SURFACE tissue temperature, deg C (NOT core temp 37C -- common mistake)
 TI = 22.0     # infusion fluid temperature, deg C (room-temp saline)
 TAU = 120.0   # thermal recovery time constant, seconds                               (TUNE)
-KL = 0.15     # leakage-to-temperature coupling coefficient                           (TUNE)
+# KL = 0.15   # leakage-to-temperature coupling coefficient                           (TUNE)
+KL = 0.6      # increased for more pronounced thermal response
 
 # --- Sensor noise / drift characteristics (DS18B20 + FSR realistic specs) ---
 DS18B20_NOISE_STD = 0.15        # deg C, random gaussian noise

@@ -54,23 +54,6 @@ This isn't an unexplored problem — there's real prior work, most notably an [o
 └── docs/                      (planned) related-work, methodology writeup
 ```
 
-## Quickstart
-
-**Simulate the dataset (Google Colab or local Python):**
-```bash
-pip install numpy pandas matplotlib
-python generate_dataset.py
-```
-Produces `synthetic_iv_infiltration_dataset.csv` — labeled temperature/pressure time-series across four severity classes (none / early / moderate / severe), each replicated under five sensor-robustness conditions (clean, noisy temperature, noisy pressure, missing temperature, missing pressure).
-
-**Run the firmware (Wokwi, free, browser-based, no hardware needed):**
-1. Create a new ESP32 project at [wokwi.com](https://wokwi.com)
-2. Paste in `firmware/sketch.ino` and `firmware/diagram.json`
-3. Add the `OneWire` and `DallasTemperature` libraries via the Library Manager
-4. Run the simulation and watch CSV sensor output over Serial
-
-Full step-by-step setup (Colab + Wokwi) is in [`SETUP.md`](SETUP.md).
-
 ## Hardware (planned)
 
 | Component | Role |
@@ -105,23 +88,6 @@ This work, as currently scoped, aims to contribute:
 1. A physics-inspired, open-source sensor simulator for IV infiltration research (filling a gap where real clinical datasets are essentially unavailable for ethical reasons).
 2. A resource-aware evaluation of multimodal detection under realistic sensor noise, drift, and failure conditions — not just clean-signal accuracy.
 3. An empirical study of synthetic-to-physical transfer performance, and a fully edge-deployed (not server-dependent) reference implementation.
-
-## Citation
-
-If you use this simulator or dataset, please cite (update once published):
-```bibtex
-@misc{iv-infiltration-monitoring,
-  title  = {Intelligent IV Infiltration Monitoring System},
-  author = {<your names>},
-  year   = {2026},
-  note   = {Undergraduate research project},
-  url    = {<repo URL>}
-}
-```
-
-## License
-
-*(choose one — MIT is a reasonable default for an open-source research tool; add `LICENSE` file)*
 
 ## Acknowledgements
 
