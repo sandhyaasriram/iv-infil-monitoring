@@ -33,11 +33,21 @@ def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None):
     """Generate one ideal trial for a given severity class."""
     rng = rng or np.random.default_rng()
     lo, hi = QL_RANGE[severity]
-    ql_rate = 0.0 if hi == 0 else rng.uniform(lo, hi)
+    
+    n_steps = int(duration_s / dt)
+    ql_array = np.zeros(n_steps)
+    final_rate = 0.0
+    
+    if hi > 0:
+        final_rate = rng.uniform(lo, hi)
+        # Randomize onset time (between 0% and 50% of the trial)
+        max_onset_idx = int(n_steps * 0.5)
+        onset_idx = rng.integers(0, max_onset_idx)
+        ql_array[onset_idx:] = final_rate
 
-    t, VL = simulate_leaked_volume(ql_rate, duration_s, dt)
+    t, VL = simulate_leaked_volume(ql_array, duration_s, dt)
     P_ideal = simulate_pressure_ideal(VL)
-    T_ideal = simulate_temperature(ql_rate, duration_s, dt)
+    T_ideal = simulate_temperature(ql_array, duration_s, dt)
 
     # Per-timestep dynamic labels (fixes the none/early boundary bias) --
     # kept alongside the old trial-level label for comparison/analysis.
@@ -49,7 +59,7 @@ def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None):
         "pressure_ideal": P_ideal,
         # Hidden ground-truth variables -- keep for analysis/plots ONLY.
         # NEVER feed these to the ML model (project Section 2.16).
-        "leak_rate_mlph": ql_rate,
+        "leak_rate_mlph": final_rate, # store final rate for reference
         "leaked_volume_ml": VL,
         "severity": severity,               # trial's nominal class (old, static)
         "label": SEVERITY_LABELS[severity], # old static label -- kept for reference

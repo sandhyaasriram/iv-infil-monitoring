@@ -23,11 +23,11 @@ import numpy as np
 from simulator.parameters import T0, TI, TAU, KL, DT
 
 
-def simulate_temperature(ql_rate_mlph, duration_s, dt=DT):
+def simulate_temperature(ql_array_mlph, duration_s, dt=DT):
     """
     Parameters
     ----------
-    ql_rate_mlph : float, constant leak rate for this trial (mL/h)
+    ql_array_mlph : np.ndarray, leak rate at each timestep (mL/h)
     duration_s   : float
     dt           : float, Euler integration timestep (s)
 
@@ -38,10 +38,10 @@ def simulate_temperature(ql_rate_mlph, duration_s, dt=DT):
     n_steps = int(duration_s / dt)
     T = np.zeros(n_steps)
     T[0] = T0
-    ql_mlps = ql_rate_mlph / 3600.0
+    ql_mlps = ql_array_mlph / 3600.0
 
     for i in range(1, n_steps):
-        dT = (T0 - T[i - 1]) / TAU + KL * ql_mlps * (TI - T[i - 1])
+        dT = (T0 - T[i - 1]) / TAU + KL * ql_mlps[i-1] * (TI - T[i - 1])
         T[i] = T[i - 1] + dT * dt
 
     return T

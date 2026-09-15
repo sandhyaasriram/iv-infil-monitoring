@@ -1,0 +1,1 @@
+[{"condition":"missing_pressure","logreg_f1":0.9838815415,"rf_f1":0.9729017553},{"condition":"normal","logreg_f1":0.984871097,"rf_f1":0.9770662421},{"condition":"noisy_temp","logreg_f1":0.9805721796,"rf_f1":0.9766064311},{"condition":"missing_temp","logreg_f1":0.9759868293,"rf_f1":0.9558349032},{"condition":"noisy_pressure","logreg_f1":0.9497383963,"rf_f1":0.9330274343}]

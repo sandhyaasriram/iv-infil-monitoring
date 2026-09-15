@@ -51,9 +51,9 @@ def build_labeled_dataframe(n_per_class=50, seed=42):
         )
 
         if condition == "missing_temp":
-            temp_sensor = apply_missing_sensor(temp_sensor, "missing")
+            temp_sensor = apply_missing_sensor(temp_sensor, "missing", rng=rng)
         if condition == "missing_pressure":
-            press_sensor = apply_missing_sensor(press_sensor, "missing")
+            press_sensor = apply_missing_sensor(press_sensor, "missing", rng=rng)
 
         for i, t in enumerate(trial["time"]):
             rows.append({
