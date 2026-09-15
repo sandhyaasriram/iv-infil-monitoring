@@ -2,7 +2,7 @@
 
 Low-cost, edge-deployable monitoring for intravenous (IV) infiltration and extravasation, built around physics-inspired simulation, lightweight machine learning, and an ESP32-based sensing prototype.
 
-> **Status:** V1 in progress — physics simulator complete, phantom-arm validation and edge deployment pending.
+> **Status:** V1 in progress — physics simulator complete, real-time 3D dashboard integrated, phantom-arm validation and edge deployment pending.
 > **SDG alignment:** SDG 3 (Good Health & Well-Being, Target 3.8) · SDG 9 (Industry, Innovation & Infrastructure, Target 9.5)
 
 ---
@@ -19,10 +19,10 @@ The approach is deliberately staged rather than jumping straight to hardware:
 
 ```
 Physics-inspired simulation  →  Synthetic sensor dataset  →  Lightweight ML
-        →  Physical phantom-arm validation  →  Quantized model on ESP32
+        →  Real-time 3D Web Dashboard  →  Physical phantom-arm validation  →  Quantized edge deployment
 ```
 
-Simulating first, before any physical data collection, lets us systematically vary conditions that are hard to control experimentally (leak rate, ambient temperature, sensor noise, missing/failed sensors) and generate a much larger, more diverse labeled dataset than a phantom-arm setup alone could produce in the available time — while still validating everything against real hardware before drawing conclusions.
+Simulating first, before any physical data collection, lets us systematically vary conditions that are hard to control experimentally (leak rate, ambient temperature, sensor noise, missing/failed sensors) and generate a much larger, more diverse labeled dataset. The real-time web dashboard allows for immediate visual feedback and continuous monitoring of the sensor stream via Web Serial.
 
 ## Research question
 
@@ -36,22 +36,17 @@ This isn't an unexplored problem — there's real prior work, most notably an [o
 
 ```
 .
-├── simulator/              Physics-inspired sensor simulation (V1: linear swelling, 0D lumped thermal)
-│   ├── parameters.py        All tunable physical/sensor constants in one place
-│   ├── infusion.py          Leaked-volume accumulation model
-│   ├── tissue.py             Swelling + ideal pressure-sensor response
-│   ├── thermal.py            0D lumped thermal ODE
-│   └── scenarios.py          Labeled trial generator (4 severity classes)
-├── sensors/
-│   └── noise.py              DS18B20 / FSR noise, drift, quantization, missing-sensor emulation
-├── generate_dataset.py      End-to-end pipeline → labeled CSV dataset
-├── firmware/                 ESP32 firmware + Wokwi simulation project
-│   ├── sketch.ino
-│   ├── diagram.json
-│   └── libraries.txt
-├── models/                   (planned) trained models, TFLite exports
-├── notebooks/                 (planned) Colab/Jupyter exploration
-└── docs/                      (planned) related-work, methodology writeup
+├── frontend/                 Real-time 3D monitoring dashboard (React/Three.js/Web Serial)
+├── simulator/                Physics-inspired sensor simulation 
+│   ├── parameters.py          Tunable physical/sensor constants
+│   ├── infusion.py            Leaked-volume accumulation model
+│   ├── tissue.py              Swelling + ideal pressure-sensor response
+│   ├── thermal.py             0D lumped thermal ODE
+│   └── scenarios.py           Labeled trial generator
+├── sensors/                  Noise, drift, and quantization emulation
+├── generate_dataset.py       End-to-end pipeline → labeled CSV dataset
+├── firmware/                 ESP32 firmware + simulation project
+└── docs/                     Documentation and methodology
 ```
 
 ## Hardware (planned)
@@ -72,15 +67,15 @@ This isn't an unexplored problem — there's real prior work, most notably an [o
 
 ## Roadmap
 
-- [x] Physics simulator (leakage, swelling, thermal) — V1
+- [x] Physics simulator (leakage, swelling, thermal)
 - [x] Sensor noise/drift/missing-data emulation layer
-- [x] ESP32 firmware validated in Wokwi
-- [ ] Lightweight ML baselines (logistic regression → random forest → 1D CNN)
+- [x] Edge firmware mockups and simulation
+- [x] **Real-time 3D monitoring dashboard with Web Serial integration**
+- [x] Lightweight ML baselines (logistic regression, random forest, etc.)
 - [ ] Sensor ablation + robustness experiments
 - [ ] Physical phantom-arm construction and data collection
 - [ ] Synthetic-to-physical transfer evaluation
-- [ ] Model quantization + on-device ESP32 deployment
-- [ ] Latency / memory / power benchmarking on real hardware
+- [ ] Proprietary on-device model deployment and benchmarking
 
 ## Contributions
 
