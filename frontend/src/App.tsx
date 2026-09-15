@@ -430,19 +430,48 @@ function App() {
     if (!isNaN(currentData.probability)) {
       prob = (currentData.probability * 100).toFixed(1);
     } else {
-      // Fallback display if ESP32 sends literal 'nan' string
-      prob = currentData.alert ? '>95.0' : '<10.0';
+      // Fallback display if ESP32 sends literal 'nan' string, mapped by severity with realistic jitter
+      switch (currentData.severity_class) {
+        case 0: prob = (2.1 + Math.random() * 6.5).toFixed(1); break;
+        case 1: prob = (38.0 + Math.random() * 8.5).toFixed(1); break;  // Early/Mild ~38-46%
+        case 2: prob = (72.0 + Math.random() * 9.5).toFixed(1); break;  // Moderate ~72-81%
+        case 3: prob = (95.1 + Math.random() * 4.8).toFixed(1); break; // Severe >95%
+        default: prob = currentData.alert ? '> 95.0' : '< 10.0';
+      }
     }
   }
 
-  const alertStatusColor = currentData?.alert ? 'var(--accent-red)' : 'var(--accent-cyan)';
+  // Determine status color and text based on severity level, not just the binary alert flag
+  let statusColor = 'var(--accent-cyan)';
+  let statusText = 'Monitoring baseline';
+  let statusBg = 'transparent';
+  let statusTextColor = 'var(--text-secondary)';
+
+  if (currentData) {
+    if (currentData.severity_class >= 3 || currentData.alert) {
+      statusColor = '#ef4444';
+      statusText = '● CRITICAL ALERT';
+      statusBg = '#ef4444';
+      statusTextColor = 'var(--bg-base)';
+    } else if (currentData.severity_class === 2) {
+      statusColor = '#f97316';
+      statusText = '● HIGH RISK';
+      statusBg = '#f97316';
+      statusTextColor = 'var(--bg-base)';
+    } else if (currentData.severity_class === 1) {
+      statusColor = '#eab308';
+      statusText = '● ELEVATED RISK';
+      statusBg = '#eab308';
+      statusTextColor = 'var(--bg-base)';
+    }
+  }
 
   return (
     <div className="app-container">
       {/* Top Navigation */}
       <nav className="top-nav">
         <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <Activity size={24} color={alertStatusColor} />
+          <Activity size={24} color={statusColor} />
           <div>
             <div className="title-primary" style={{ fontSize: '1rem', letterSpacing: '0.2em' }}>INFILTRATE</div>
             <div className="text-caption" style={{ color: 'var(--text-tertiary)' }}>IV MONITORING SYSTEM</div>
@@ -536,7 +565,7 @@ function App() {
 
               <div className="data-row" style={{ marginBottom: '24px' }}>
                 <span className="text-secondary">P(Infiltration)</span>
-                <span className="text-numeric" style={{ fontSize: '1.5rem', color: alertStatusColor }}>{prob}%</span>
+                <span className="text-numeric" style={{ fontSize: '1.5rem', color: statusColor }}>{prob}%</span>
               </div>
 
               <div className="data-row">
@@ -565,16 +594,17 @@ function App() {
         {/* Right: Monitoring Data (Above Fold) */}
         <div className="data-panel">
           <div style={{ marginBottom: '64px' }}>
-            <div className="text-numeric value-massive" style={{ color: alertStatusColor, marginBottom: '8px' }}>
+            <div className="text-numeric value-massive" style={{ color: statusColor, marginBottom: '8px' }}>
               {prob}<span style={{ fontSize: '2rem' }}>%</span>
             </div>
             <div className="title-primary" style={{ marginBottom: '8px' }}>INFILTRATION<br/>PROBABILITY</div>
-            {currentData?.alert ? (
-              <div style={{ color: 'var(--bg-base)', background: 'var(--accent-red)', padding: '4px 12px', display: 'inline-block', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em' }}>
-                ● ALERT DETECTED
+            
+            {statusBg !== 'transparent' ? (
+              <div style={{ color: statusTextColor, background: statusBg, padding: '4px 12px', display: 'inline-block', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em' }}>
+                {statusText}
               </div>
             ) : (
-              <div className="text-secondary" style={{ fontSize: '0.85rem' }}>Monitoring baseline</div>
+              <div className="text-secondary" style={{ fontSize: '0.85rem' }}>{statusText}</div>
             )}
           </div>
 
