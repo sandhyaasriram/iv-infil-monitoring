@@ -1,0 +1,397 @@
+{
+  "main": {
+    "threshold": {
+      "model": "threshold",
+      "macro_f1": 0.325,
+      "weighted_f1": 0.5733,
+      "balanced_acc": 0.364,
+      "confusion_matrix": [
+        [
+          716,
+          261,
+          0,
+          0
+        ],
+        [
+          147,
+          384,
+          0,
+          0
+        ],
+        [
+          24,
+          231,
+          0,
+          0
+        ],
+        [
+          5,
+          32,
+          0,
+          0
+        ]
+      ],
+      "detection_delay": {
+        "n_infiltration_trials": 37,
+        "n_detected": 37,
+        "n_missed": 0,
+        "n_premature_alarms": 30,
+        "mean_delay_raw_s": -258.03,
+        "median_delay_raw_s": -130.0,
+        "mean_delay_clamped_s": 39.38
+      },
+      "confounder_fpr": {
+        "fpr": 0.2361,
+        "n_confounder_windows": 432,
+        "n_false_alarms": 102,
+        "ci_lower": 0.1961,
+        "ci_upper": 0.2762
+      }
+    },
+    "logistic_regression": {
+      "model": "logistic_regression",
+      "macro_f1": 0.9684,
+      "weighted_f1": 0.9641,
+      "balanced_acc": 0.9606,
+      "confusion_matrix": [
+        [
+          972,
+          5,
+          0,
+          0
+        ],
+        [
+          46,
+          481,
+          4,
+          0
+        ],
+        [
+          0,
+          8,
+          247,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          36
+        ]
+      ],
+      "detection_delay": {
+        "n_infiltration_trials": 37,
+        "n_detected": 37,
+        "n_missed": 0,
+        "n_premature_alarms": 19,
+        "mean_delay_raw_s": 35.22,
+        "median_delay_raw_s": -2.0,
+        "mean_delay_clamped_s": 51.68
+      },
+      "confounder_fpr": {
+        "fpr": 0.0,
+        "n_confounder_windows": 432,
+        "n_false_alarms": 0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0
+      }
+    },
+    "random_forest": {
+      "model": "random_forest",
+      "macro_f1": 0.9857,
+      "weighted_f1": 0.9867,
+      "balanced_acc": 0.9901,
+      "confusion_matrix": [
+        [
+          968,
+          9,
+          0,
+          0
+        ],
+        [
+          8,
+          517,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          254,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          37
+        ]
+      ],
+      "detection_delay": {
+        "n_infiltration_trials": 37,
+        "n_detected": 37,
+        "n_missed": 0,
+        "n_premature_alarms": 30,
+        "mean_delay_raw_s": -28.3,
+        "median_delay_raw_s": -27.0,
+        "mean_delay_clamped_s": 5.0
+      },
+      "confounder_fpr": {
+        "fpr": 0.0,
+        "n_confounder_windows": 432,
+        "n_false_alarms": 0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0
+      }
+    },
+    "deep_resnet": {
+      "model": "deep_resnet",
+      "macro_f1": 0.9557,
+      "weighted_f1": 0.9779,
+      "balanced_acc": 0.9707,
+      "confusion_matrix": [
+        [
+          961,
+          16,
+          0,
+          0
+        ],
+        [
+          6,
+          523,
+          2,
+          0
+        ],
+        [
+          0,
+          8,
+          240,
+          7
+        ],
+        [
+          0,
+          0,
+          1,
+          36
+        ]
+      ],
+      "detection_delay": {
+        "n_infiltration_trials": 37,
+        "n_detected": 37,
+        "n_missed": 0,
+        "n_premature_alarms": 33,
+        "mean_delay_raw_s": -41.81,
+        "median_delay_raw_s": -29.0,
+        "mean_delay_clamped_s": 1.03
+      },
+      "confounder_fpr": {
+        "fpr": 0.0,
+        "n_confounder_windows": 432,
+        "n_false_alarms": 0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0
+      },
+      "macro_f1_mean": 0.9634,
+      "macro_f1_std": 0.0078,
+      "balanced_acc_mean": 0.9769,
+      "delay_raw_mean_s": -40.91,
+      "delay_raw_std_s": 1.27,
+      "fpr_mean": 0.0,
+      "fpr_std": 0.0,
+      "per_seed": [
+        {
+          "seed": 42,
+          "macro_f1": 0.9557,
+          "delay_raw_s": -41.81
+        },
+        {
+          "seed": 101,
+          "macro_f1": 0.974,
+          "delay_raw_s": -41.81
+        },
+        {
+          "seed": 202,
+          "macro_f1": 0.9604,
+          "delay_raw_s": -39.11
+        }
+      ]
+    },
+    "tcn": {
+      "model": "tcn",
+      "macro_f1": 0.9564,
+      "weighted_f1": 0.9642,
+      "balanced_acc": 0.9527,
+      "confusion_matrix": [
+        [
+          926,
+          51,
+          0,
+          0
+        ],
+        [
+          3,
+          526,
+          2,
+          0
+        ],
+        [
+          0,
+          4,
+          250,
+          1
+        ],
+        [
+          0,
+          0,
+          4,
+          33
+        ]
+      ],
+      "detection_delay": {
+        "n_infiltration_trials": 37,
+        "n_detected": 37,
+        "n_missed": 0,
+        "n_premature_alarms": 36,
+        "mean_delay_raw_s": -89.11,
+        "median_delay_raw_s": -77.0,
+        "mean_delay_clamped_s": 0.08
+      },
+      "confounder_fpr": {
+        "fpr": 0.0023,
+        "n_confounder_windows": 432,
+        "n_false_alarms": 1,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0068
+      },
+      "macro_f1_mean": 0.9572,
+      "macro_f1_std": 0.0012,
+      "balanced_acc_mean": 0.9579,
+      "delay_raw_mean_s": -93.16,
+      "delay_raw_std_s": 30.48,
+      "fpr_mean": 0.0054,
+      "fpr_std": 0.0061,
+      "per_seed": [
+        {
+          "seed": 42,
+          "macro_f1": 0.9564,
+          "delay_raw_s": -89.11
+        },
+        {
+          "seed": 101,
+          "macro_f1": 0.9562,
+          "delay_raw_s": -132.35
+        },
+        {
+          "seed": 202,
+          "macro_f1": 0.9589,
+          "delay_raw_s": -58.03
+        }
+      ]
+    }
+  },
+  "sensor_ablation": {
+    "temp_only": {
+      "macro_f1_mean": 0.5784,
+      "macro_f1_std": 0.0122
+    },
+    "pressure_only": {
+      "macro_f1_mean": 0.954,
+      "macro_f1_std": 0.0109
+    },
+    "temp_pressure": {
+      "macro_f1_mean": 0.9572,
+      "macro_f1_std": 0.0012
+    }
+  },
+  "window_ablation": {
+    "10": {
+      "macro_f1": 0.9086
+    },
+    "25": {
+      "macro_f1": 0.9195
+    },
+    "50": {
+      "macro_f1": 0.9564
+    }
+  },
+  "shuffle_ablation": {
+    "tcn": {
+      "macro_f1": 0.9551
+    },
+    "deep_resnet": {
+      "macro_f1": 0.968
+    }
+  },
+  "scarcity_20pct": {
+    "rf_seed42": {
+      "macro_f1": 0.9666,
+      "balanced_acc": 0.9664,
+      "n_train_trials": 24
+    },
+    "tcn_seed42": {
+      "macro_f1": 0.7787,
+      "balanced_acc": 0.7546,
+      "n_train_trials": 24
+    },
+    "rf_seed101": {
+      "macro_f1": 0.9761,
+      "balanced_acc": 0.9848,
+      "n_train_trials": 24
+    },
+    "tcn_seed101": {
+      "macro_f1": 0.8583,
+      "balanced_acc": 0.8354,
+      "n_train_trials": 24
+    },
+    "rf_seed202": {
+      "macro_f1": 0.983,
+      "balanced_acc": 0.9808,
+      "n_train_trials": 24
+    },
+    "tcn_seed202": {
+      "macro_f1": 0.8699,
+      "balanced_acc": 0.8449,
+      "n_train_trials": 24
+    },
+    "rf_summary": {
+      "macro_f1_mean": 0.9752,
+      "macro_f1_std": 0.0067
+    },
+    "tcn_summary": {
+      "macro_f1_mean": 0.8356,
+      "macro_f1_std": 0.0405
+    }
+  },
+  "scenario_breakdown": {
+    "normal": {
+      "n_trials": 7,
+      "n_windows": 252,
+      "macro_f1": 0.8818,
+      "balanced_acc": 0.8456
+    },
+    "noisy_temp": {
+      "n_trials": 13,
+      "n_windows": 468,
+      "macro_f1": 0.9601,
+      "balanced_acc": 0.9493
+    },
+    "noisy_pressure": {
+      "n_trials": 13,
+      "n_windows": 468,
+      "macro_f1": 0.9674,
+      "balanced_acc": 0.972
+    },
+    "missing_temp": {
+      "n_trials": 11,
+      "n_windows": 396,
+      "macro_f1": 0.9759,
+      "balanced_acc": 0.9812
+    },
+    "missing_pressure": {
+      "n_trials": 6,
+      "n_windows": 216,
+      "macro_f1": 0.939,
+      "balanced_acc": 0.9504
+    }
+  }
+}

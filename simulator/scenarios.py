@@ -29,8 +29,9 @@ def label_from_volume(vl):
     return SEVERITY_LABELS["none"]
 
 
-def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None):
-    """Generate one ideal trial for a given severity class."""
+def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None,
+                   vasoconstriction_profile=None, tissue_model="nonlinear"):
+    """Generate one ideal trial for a given severity class with grounded physiology."""
     rng = rng or np.random.default_rng()
     lo, hi = QL_RANGE[severity]
     
@@ -46,8 +47,8 @@ def generate_trial(severity, duration_s=DURATION_S, dt=DT, rng=None):
         ql_array[onset_idx:] = final_rate
 
     t, VL = simulate_leaked_volume(ql_array, duration_s, dt)
-    P_ideal = simulate_pressure_ideal(VL)
-    T_ideal = simulate_temperature(ql_array, duration_s, dt)
+    P_ideal = simulate_pressure_ideal(VL, model=tissue_model, dt=dt)
+    T_ideal = simulate_temperature(ql_array, duration_s, dt, vasoconstriction_profile=vasoconstriction_profile)
 
     # Per-timestep dynamic labels (fixes the none/early boundary bias) --
     # kept alongside the old trial-level label for comparison/analysis.

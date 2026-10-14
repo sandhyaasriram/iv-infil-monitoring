@@ -1,35 +1,34 @@
 """
-Layer 3: 0D LUMPED thermal model (V1, per spec).
+Layer 3: Pennes Bioheat Convective Cooling Model with Systemic Vasomotor Coupling.
 
-    dT/dt = (T0 - T)/tau + KL * QL(t) * (TI - T)
+Governing dynamic heat equation:
+    dT/dt = (T_target(t) - T)/tau_perf(t) + K_conv * QL(t) * (TI - T)
 
-NOTE on a bug caught during sanity-checking: the recovery term pulls tissue
-temperature back toward its own baseline T0 (perfusion-maintained skin temp),
-NOT toward ambient TA. Skin is thermoregulated by blood perfusion, so with no
-leak it should hold near T0 indefinitely, not drift toward room temperature
-over 30 minutes. Using TA as the recovery target made every severity class
-converge to the same value regardless of leak rate -- caught by plotting
-temperature-vs-time across severities before trusting the model (do this
-check yourself, on any parameter changes you make).
-
-This is a single lumped-parameter ODE (no spatial resolution), consistent with
-V1's feature-engineering-based ML approach, which doesn't need spatial detail.
-A full 2D Pennes bioheat model is a valid V2 refinement if you later need
-sensor-placement-sensitivity results, but don't build both in parallel now.
-
-Explicit Euler integration, dt should match DS18B20 practical sampling interval.
+Where:
+- T_target(t) represents the local perfusion equilibrium temperature. Under resting
+  conditions, this equals T0 (skin baseline ~33 C).
+- Under sympathetic nervous activation (stress, pain, hypothermia, vasoconstriction),
+  peripheral blood flow is reduced, dropping T_target by up to DELTA_T_VASOCONSTRICTION_MAX.
+- K_conv is grounded in convective heat transport: rho_f * c_f / (rho_t * c_t * V_eff).
 """
 import numpy as np
-from simulator.parameters import T0, TI, TAU, KL, DT
+from simulator.parameters import (
+    T0, TI, TAU, KL, DT, DELTA_T_VASOCONSTRICTION_MAX,
+)
 
 
-def simulate_temperature(ql_array_mlph, duration_s, dt=DT):
+def simulate_temperature(ql_array_mlph, duration_s, dt=DT, vasoconstriction_profile=None):
     """
     Parameters
     ----------
-    ql_array_mlph : np.ndarray, leak rate at each timestep (mL/h)
-    duration_s   : float
-    dt           : float, Euler integration timestep (s)
+    ql_array_mlph : np.ndarray
+        Leak rate at each timestep (mL/h)
+    duration_s : float
+    dt : float, Euler integration timestep (s)
+    vasoconstriction_profile : np.ndarray or None
+        Normalized autonomic vasoconstriction intensity [0.0, 1.0] over time.
+        0.0 = normothermic resting baseline
+        1.0 = peak sympathetic vasoconstriction (cold/stress induced)
 
     Returns
     -------
@@ -40,8 +39,25 @@ def simulate_temperature(ql_array_mlph, duration_s, dt=DT):
     T[0] = T0
     ql_mlps = ql_array_mlph / 3600.0
 
+    if vasoconstriction_profile is None:
+        vaso = np.zeros(n_steps)
+    else:
+        vaso = np.asarray(vasoconstriction_profile)
+        if len(vaso) < n_steps:
+            vaso = np.pad(vaso, (0, n_steps - len(vaso)), mode='edge')
+        elif len(vaso) > n_steps:
+            vaso = vaso[:n_steps]
+
     for i in range(1, n_steps):
-        dT = (T0 - T[i - 1]) / TAU + KL * ql_mlps[i-1] * (TI - T[i - 1])
+        # Autonomic baseline modulation
+        t_base_i = T0 - DELTA_T_VASOCONSTRICTION_MAX * vaso[i - 1]
+        tau_eff = TAU * (1.0 + 0.5 * vaso[i - 1]) # reduced perfusion slows recovery
+
+        # Convective heat sink + perfusion recovery
+        dT_perf = (t_base_i - T[i - 1]) / tau_eff
+        dT_leak = KL * ql_mlps[i - 1] * (TI - T[i - 1])
+        dT = dT_perf + dT_leak
         T[i] = T[i - 1] + dT * dt
 
     return T
+

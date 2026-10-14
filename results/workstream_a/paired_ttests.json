@@ -1,0 +1,234 @@
+{
+  "Z": {
+    "20": {
+      "t_stat": 7.8278,
+      "p_value": 4.902482386625747e-07,
+      "mean_before": 647.014,
+      "mean_after": 484.141,
+      "pct_change": -25.17,
+      "n_patients": 18
+    },
+    "50": {
+      "t_stat": 8.0908,
+      "p_value": 3.1291984174402287e-07,
+      "mean_before": 499.254,
+      "mean_after": 370.279,
+      "pct_change": -25.83,
+      "n_patients": 18
+    },
+    "100": {
+      "t_stat": 7.335,
+      "p_value": 1.1652038997020636e-06,
+      "mean_before": 420.416,
+      "mean_after": 314.658,
+      "pct_change": -25.16,
+      "n_patients": 18
+    },
+    "150": {
+      "t_stat": 6.6169,
+      "p_value": 4.362664246717374e-06,
+      "mean_before": 375.964,
+      "mean_after": 287.748,
+      "pct_change": -23.46,
+      "n_patients": 18
+    },
+    "200": {
+      "t_stat": 6.5356,
+      "p_value": 5.087800555130627e-06,
+      "mean_before": 359.11,
+      "mean_after": 273.379,
+      "pct_change": -23.87,
+      "n_patients": 18
+    },
+    "300": {
+      "t_stat": 5.821,
+      "p_value": 2.0446285598313245e-05,
+      "mean_before": 332.473,
+      "mean_after": 257.175,
+      "pct_change": -22.65,
+      "n_patients": 18
+    },
+    "500": {
+      "t_stat": 5.2851,
+      "p_value": 6.062211006391928e-05,
+      "mean_before": 306.05,
+      "mean_after": 238.792,
+      "pct_change": -21.98,
+      "n_patients": 18
+    }
+  },
+  "R": {
+    "20": {
+      "t_stat": 7.8168,
+      "p_value": 4.996286254967893e-07,
+      "mean_before": 643.561,
+      "mean_after": 481.189,
+      "pct_change": -25.23,
+      "n_patients": 18
+    },
+    "50": {
+      "t_stat": 8.0789,
+      "p_value": 3.1927432499834436e-07,
+      "mean_before": 498.244,
+      "mean_after": 369.428,
+      "pct_change": -25.85,
+      "n_patients": 18
+    },
+    "100": {
+      "t_stat": 7.3287,
+      "p_value": 1.1785122308493391e-06,
+      "mean_before": 419.972,
+      "mean_after": 314.306,
+      "pct_change": -25.16,
+      "n_patients": 18
+    },
+    "150": {
+      "t_stat": 6.6114,
+      "p_value": 4.40745825312514e-06,
+      "mean_before": 375.667,
+      "mean_after": 287.522,
+      "pct_change": -23.46,
+      "n_patients": 18
+    },
+    "200": {
+      "t_stat": 6.5317,
+      "p_value": 5.125709962538266e-06,
+      "mean_before": 358.906,
+      "mean_after": 273.217,
+      "pct_change": -23.88,
+      "n_patients": 18
+    },
+    "300": {
+      "t_stat": 5.8182,
+      "p_value": 2.056392478100626e-05,
+      "mean_before": 332.339,
+      "mean_after": 257.072,
+      "pct_change": -22.65,
+      "n_patients": 18
+    },
+    "500": {
+      "t_stat": 5.2829,
+      "p_value": 6.088978135240728e-05,
+      "mean_before": 305.972,
+      "mean_after": 238.733,
+      "pct_change": -21.98,
+      "n_patients": 18
+    }
+  },
+  "Xc": {
+    "20": {
+      "t_stat": -6.1167,
+      "p_value": 1.140520162050965e-05,
+      "mean_before": -65.492,
+      "mean_after": -52.393,
+      "pct_change": 20.0,
+      "n_patients": 18
+    },
+    "50": {
+      "t_stat": -6.3794,
+      "p_value": 6.8551986897915775e-06,
+      "mean_before": -31.084,
+      "mean_after": -24.508,
+      "pct_change": 21.16,
+      "n_patients": 18
+    },
+    "100": {
+      "t_stat": -5.8214,
+      "p_value": 2.0429938764431822e-05,
+      "mean_before": -18.826,
+      "mean_after": -14.474,
+      "pct_change": 23.12,
+      "n_patients": 18
+    },
+    "150": {
+      "t_stat": -5.6651,
+      "p_value": 2.7945427162979082e-05,
+      "mean_before": -14.516,
+      "mean_after": -11.04,
+      "pct_change": 23.95,
+      "n_patients": 18
+    },
+    "200": {
+      "t_stat": -4.154,
+      "p_value": 0.0006645125881628607,
+      "mean_before": -11.645,
+      "mean_after": -9.061,
+      "pct_change": 22.19,
+      "n_patients": 18
+    },
+    "300": {
+      "t_stat": -4.0251,
+      "p_value": 0.0008781476921981124,
+      "mean_before": -9.005,
+      "mean_after": -6.971,
+      "pct_change": 22.59,
+      "n_patients": 18
+    },
+    "500": {
+      "t_stat": -3.8796,
+      "p_value": 0.0012037655423898753,
+      "mean_before": -6.548,
+      "mean_after": -5.045,
+      "pct_change": 22.95,
+      "n_patients": 18
+    }
+  },
+  "Cm": {
+    "20": {
+      "t_stat": -5.2988,
+      "p_value": 5.8927459111029745e-05,
+      "mean_before": 128.391,
+      "mean_after": 164.655,
+      "pct_change": 28.25,
+      "n_patients": 18
+    },
+    "50": {
+      "t_stat": -5.7706,
+      "p_value": 2.2615005947200577e-05,
+      "mean_before": 107.002,
+      "mean_after": 136.925,
+      "pct_change": 27.97,
+      "n_patients": 18
+    },
+    "100": {
+      "t_stat": -4.8835,
+      "p_value": 0.00013992476911243418,
+      "mean_before": 88.946,
+      "mean_after": 112.874,
+      "pct_change": 26.9,
+      "n_patients": 18
+    },
+    "150": {
+      "t_stat": -4.4135,
+      "p_value": 0.0003800188069718192,
+      "mean_before": 76.839,
+      "mean_after": 97.807,
+      "pct_change": 27.29,
+      "n_patients": 18
+    },
+    "200": {
+      "t_stat": -4.1315,
+      "p_value": 0.0006974958488173696,
+      "mean_before": 70.105,
+      "mean_after": 89.109,
+      "pct_change": 27.11,
+      "n_patients": 18
+    },
+    "300": {
+      "t_stat": -3.7431,
+      "p_value": 0.0016188647243898216,
+      "mean_before": 60.68,
+      "mean_after": 76.743,
+      "pct_change": 26.47,
+      "n_patients": 18
+    },
+    "500": {
+      "t_stat": -3.5725,
+      "p_value": 0.0023449971462244606,
+      "mean_before": 49.943,
+      "mean_after": 63.592,
+      "pct_change": 27.33,
+      "n_patients": 18
+    }
+  }
+}

@@ -1,0 +1,1416 @@
+{
+  "combined_abs_LR": {
+    "label": "combined_abs_LR",
+    "balanced_acc": 0.7222,
+    "sensitivity": 0.7222,
+    "specificity": 0.7222,
+    "precision": 0.7222,
+    "f1": 0.7222,
+    "roc_auc": 0.7932,
+    "confusion_matrix": [
+      [
+        13,
+        5
+      ],
+      [
+        5,
+        13
+      ]
+    ],
+    "n_samples": 36,
+    "fold_details": [
+      {
+        "patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      }
+    ]
+  },
+  "combined_abs_RF": {
+    "label": "combined_abs_RF",
+    "balanced_acc": 0.6944,
+    "sensitivity": 0.7222,
+    "specificity": 0.6667,
+    "precision": 0.6842,
+    "f1": 0.7027,
+    "roc_auc": 0.6975,
+    "confusion_matrix": [
+      [
+        12,
+        6
+      ],
+      [
+        5,
+        13
+      ]
+    ],
+    "n_samples": 36,
+    "fold_details": [
+      {
+        "patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      }
+    ]
+  },
+  "relative_LR": {
+    "label": "relative_LR",
+    "balanced_acc": 0.9722,
+    "sensitivity": 0.9444,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "f1": 0.9714,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        18,
+        0
+      ],
+      [
+        1,
+        17
+      ]
+    ],
+    "n_samples": 36,
+    "fold_details": [
+      {
+        "patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      }
+    ]
+  },
+  "relative_RF": {
+    "label": "relative_RF",
+    "balanced_acc": 1.0,
+    "sensitivity": 1.0,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        18,
+        0
+      ],
+      [
+        0,
+        18
+      ]
+    ],
+    "n_samples": 36,
+    "fold_details": [
+      {
+        "patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      },
+      {
+        "patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "n_test": 2
+      }
+    ]
+  },
+  "threshold_Z_20kHz": {
+    "label": "threshold_Z_20kHz",
+    "balanced_acc": 0.9722,
+    "sensitivity": 0.9444,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "f1": 0.9714,
+    "roc_auc": 0.9722,
+    "confusion_matrix": [
+      [
+        18,
+        0
+      ],
+      [
+        1,
+        17
+      ]
+    ],
+    "n_samples": 36
+  },
+  "freq_ablation": {
+    "20kHz": {
+      "label": "rel_LR_20kHz",
+      "balanced_acc": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "n_samples": 36
+    },
+    "50kHz": {
+      "label": "rel_LR_50kHz",
+      "balanced_acc": 0.9444,
+      "sensitivity": 0.8889,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9412,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          2,
+          16
+        ]
+      ],
+      "n_samples": 36
+    },
+    "100kHz": {
+      "label": "rel_LR_100kHz",
+      "balanced_acc": 0.9167,
+      "sensitivity": 0.8333,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9091,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "n_samples": 36
+    },
+    "150kHz": {
+      "label": "rel_LR_150kHz",
+      "balanced_acc": 0.9167,
+      "sensitivity": 0.8333,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9091,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "n_samples": 36
+    },
+    "200kHz": {
+      "label": "rel_LR_200kHz",
+      "balanced_acc": 0.9167,
+      "sensitivity": 0.8333,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9091,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "n_samples": 36
+    },
+    "300kHz": {
+      "label": "rel_LR_300kHz",
+      "balanced_acc": 0.9167,
+      "sensitivity": 0.8333,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9091,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "n_samples": 36
+    },
+    "500kHz": {
+      "label": "rel_LR_500kHz",
+      "balanced_acc": 0.9167,
+      "sensitivity": 0.8333,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9091,
+      "roc_auc": 0.8889,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "n_samples": 36
+    }
+  },
+  "param_ablation": {
+    "Z": {
+      "label": "rel_LR_Z",
+      "balanced_acc": 0.9444,
+      "sensitivity": 0.8889,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9412,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          2,
+          16
+        ]
+      ],
+      "n_samples": 36
+    },
+    "R": {
+      "label": "rel_LR_R",
+      "balanced_acc": 0.9444,
+      "sensitivity": 0.8889,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9412,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          2,
+          16
+        ]
+      ],
+      "n_samples": 36
+    },
+    "Xc": {
+      "label": "rel_LR_Xc",
+      "balanced_acc": 0.9722,
+      "sensitivity": 0.9444,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9714,
+      "roc_auc": 0.9444,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "n_samples": 36
+    },
+    "Cm": {
+      "label": "rel_LR_Cm",
+      "balanced_acc": 0.9444,
+      "sensitivity": 0.8889,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.9412,
+      "roc_auc": 0.9444,
+      "confusion_matrix": [
+        [
+          18,
+          0
+        ],
+        [
+          2,
+          16
+        ]
+      ],
+      "n_samples": 36
+    }
+  },
+  "patient_level_errors": [
+    {
+      "patient_id": 108,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 111,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 113,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 114,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 116,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 120,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        0
+      ],
+      "errors": 1
+    },
+    {
+      "patient_id": 122,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 123,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 124,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 125,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 126,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 128,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 131,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 133,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 134,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 135,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 136,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    },
+    {
+      "patient_id": 137,
+      "y_true": [
+        0,
+        1
+      ],
+      "y_pred": [
+        0,
+        1
+      ],
+      "errors": 0
+    }
+  ]
+}

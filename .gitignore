@@ -23,6 +23,11 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Python environment and bytecode
+.venv/
+__pycache__/
+*.pyc
+
 # Local docs (not for public repo)
 ARCHITECTURE.md
 how-to-setup.md

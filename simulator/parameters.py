@@ -20,14 +20,24 @@ QL_RANGE = {
     "severe":   (8, 15),
 }
 
-# --- Tissue swelling model (V1: LINEAR, per spec) ---
+# --- Tissue swelling model (V1 Linear + V2 Nonlinear Biomechanical) ---
 # v2 update: KS/KP raised ~4x/3x after ablation showed pressure_only F1 ~0.16
 # (near-random) -- ideal signal amplitude was ~0.45 counts vs FSR_NOISE_STD=3.0.
 KS = 0.08     # swelling sensitivity: mm deformation per mL leaked                    (TUNE)
 KP = 15.0     # pressure sensor gain: ADC-equivalent counts per mm swelling            (TUNE)
 P0 = 50.0     # baseline FSR reading at rest, ADC-equivalent counts                    (TUNE)
 
-# --- Thermal model (V1: 0D LUMPED, per spec) ---
+# V2 Nonlinear biomechanical parameters (calibrated to soft tissue J-curve & Bicen 2018):
+# - Toe region: slow initial skin tension at V_L < 0.5 mL as fluid fills hypodermis pores
+# - Elastic stretch: rapid surface deflection between 1 - 5 mL
+# - Saturation: fascial dissection and collagen limit at V_L > 5 mL
+S_MAX = 3.0          # maximum surface deformation (mm) before lateral fascial tracking
+V_HALF = 3.5         # volume at half-maximum deformation (mL)
+HILL_EXPONENT = 1.8  # sigmoidal exponent capturing toe-region curvature
+ETA_VISCOUS = 4.0    # dynamic viscoelastic resistance (ADC * s / mm)
+K_DRAIN_PER_S = 1.5e-5 # lymphatic clearance rate (~0.054 h^-1, Starling interstitial uptake)
+
+# --- Thermal model (V1 0D Lumped + V2 Pennes Bioheat Grounding) ---
 TA = 25.0     # ambient temperature, deg C
 T0 = 33.0     # initial SKIN-SURFACE tissue temperature, deg C (NOT core temp 37C -- common mistake)
 TI = 22.0     # infusion fluid temperature, deg C (room-temp saline)
@@ -35,6 +45,12 @@ TAU = 120.0   # thermal recovery time constant, seconds                         
 # v2 update: KL raised 4x -- moderate/severe temperature curves were separated by
 # only ~0.06 C at v1 values, smaller than DS18B20's own 0.0625 C quantization step.
 KL = 0.6      # leakage-to-temperature coupling coefficient                           (TUNE)
+
+# V2 Pennes Bioheat & Systemic Autonomic Coupling:
+T_CORE = 37.0                         # core temperature, deg C
+DELTA_T_VASOCONSTRICTION_MAX = 1.2    # max peripheral skin cooling under sympathetic stress (deg C)
+TAU_PERFUSION_NORMAL = 120.0          # normal baseline perfusion time constant (s)
+K_CONVECTIVE_BIOHEAT = 0.45           # effective convective heat extraction coefficient per mL/s
 
 # --- Sensor noise / drift characteristics (DS18B20 + FSR realistic specs) ---
 DS18B20_NOISE_STD = 0.15        # deg C, random gaussian noise
