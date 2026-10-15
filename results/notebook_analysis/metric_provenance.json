@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-15T06:19:28.755616",
+  "notebook_source": "notebooks/IV_Infiltration_Complete_Results_Analysis.ipynb",
+  "primary_baseline_model1": {
+    "architecture": "Causal TCN (Local Temp + Pressure)",
+    "macro_f1_mean": 0.9007,
+    "balanced_acc_mean": 0.8765,
+    "confounder_fpr_mean": 0.0115,
+    "parameters": 59908,
+    "latency_cpu_ms": 5.011
+  },
+  "clinical_bioimpedance_discrepancy": {
+    "dataset": "Jeong et al. 2019 PLOS ONE (N=18)",
+    "retrospective_paired_relative_lr_bal_acc": 0.9722,
+    "prospective_blind_raw_lr_bal_acc": 0.7222,
+    "overlap_percentage": 66.7,
+    "root_cause": "Inter-patient anatomical variance (Z baseline ranges from 418 to 992 Ohm)"
+  },
+  "model2_simulated_bio_fusion": {
+    "macro_f1": 0.9689,
+    "status": "Exploratory Simulated Proof-of-Concept",
+    "coupling_note": "Driven continuously from latent ODE volume state variable"
+  },
+  "model4_age_aware": {
+    "status": "UNEVALUATED (Data Blocked)",
+    "reason": "Individual patient age labels are absent from both clinical and synthetic datasets"
+  }
+}

@@ -1,0 +1,2258 @@
+{
+  "retrospective_paired_relative_LR": {
+    "balanced_accuracy": 0.9722,
+    "f1_score": 0.9714,
+    "sensitivity": 0.9444,
+    "sensitivity_ci_95": [
+      0.7424,
+      0.9901
+    ],
+    "specificity": 1.0,
+    "specificity_ci_95": [
+      0.8241,
+      1.0
+    ],
+    "precision": 1.0,
+    "roc_auc": 1.0,
+    "accuracy_ci_95": [
+      0.8583,
+      0.9951
+    ],
+    "confusion_matrix": [
+      [
+        18,
+        0
+      ],
+      [
+        1,
+        17
+      ]
+    ],
+    "n_samples": 36,
+    "n_patients": 18,
+    "fold_records": [
+      {
+        "test_patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0412982728542922,
+          0.9996077649630745
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.04221115762005616,
+          0.9682895858406969
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.03649360166144593,
+          0.5573914317518566
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.04207592304455328,
+          0.9973859079116051
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.042331752851660784,
+          0.9897530089003309
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.03279268410684617,
+          0.45726601075365053
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0419343680434563,
+          0.9986782123983738
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.04137214598633703,
+          0.9999830798218755
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.03903893540531863,
+          0.9999999475887261
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.04214481198672514,
+          0.9974680294023364
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.04143799933074916,
+          0.9999519791916277
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.03973090698546524,
+          0.9999994514646342
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.040670731907279364,
+          0.7504569187814044
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.04017530031576788,
+          0.9999999556002432
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.040154649499117845,
+          0.9999998407792428
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.04185710523012511,
+          0.9994093877639587
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.042186037363332145,
+          0.9966739392342323
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.03763445461323599,
+          0.9999997957657478
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "retrospective_paired_relative_RF": {
+    "balanced_accuracy": 1.0,
+    "f1_score": 1.0,
+    "sensitivity": 1.0,
+    "sensitivity_ci_95": [
+      0.8241,
+      1.0
+    ],
+    "specificity": 1.0,
+    "specificity_ci_95": [
+      0.8241,
+      1.0
+    ],
+    "precision": 1.0,
+    "roc_auc": 1.0,
+    "accuracy_ci_95": [
+      0.9036,
+      1.0
+    ],
+    "confusion_matrix": [
+      [
+        18,
+        0
+      ],
+      [
+        0,
+        18
+      ]
+    ],
+    "n_samples": 36,
+    "n_patients": 18,
+    "fold_records": [
+      {
+        "test_patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          0.62
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          0.86
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          0.98
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          0.96
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          0.56
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          1.0
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.0,
+          0.94
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "single_observation_raw_LR_default": {
+    "balanced_accuracy": 0.7222,
+    "f1_score": 0.7222,
+    "sensitivity": 0.7222,
+    "sensitivity_ci_95": [
+      0.4913,
+      0.875
+    ],
+    "specificity": 0.7222,
+    "specificity_ci_95": [
+      0.4913,
+      0.875
+    ],
+    "precision": 0.7222,
+    "roc_auc": 0.7932,
+    "accuracy_ci_95": [
+      0.5601,
+      0.8415
+    ],
+    "confusion_matrix": [
+      [
+        13,
+        5
+      ],
+      [
+        5,
+        13
+      ]
+    ],
+    "n_samples": 36,
+    "n_patients": 18,
+    "fold_records": [
+      {
+        "test_patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.03272273965121454,
+          0.1361220814431038
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.3703715970273118,
+          0.5917971735073236
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.04011623793888559,
+          0.07424329802261205
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.08127748273410505,
+          0.37763237775585073
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.48675750906547893,
+          0.8185241352624785
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.7148842013562714,
+          0.8157698014178804
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.5460812662317366,
+          0.7910760113673656
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.5642759246751243,
+          0.9742401456436417
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.25387049106618276,
+          0.9329291962797227
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.327037687655348,
+          0.7223602377945083
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.21084582312965625,
+          0.7654175515286902
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.009911474105925416,
+          0.3612283989902721
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.9851055337625549,
+          0.9934308178718155
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.6321949158700189,
+          0.9809757058293226
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.170161788683501,
+          0.9429008998303393
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.4377900077481671,
+          0.8684013631609934
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.05219258124748769,
+          0.3341375001011162
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.34835819202424145,
+          0.5646355153505751
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "single_observation_raw_RF_default": {
+    "balanced_accuracy": 0.6944,
+    "f1_score": 0.6857,
+    "sensitivity": 0.6667,
+    "sensitivity_ci_95": [
+      0.4375,
+      0.8372
+    ],
+    "specificity": 0.7222,
+    "specificity_ci_95": [
+      0.4913,
+      0.875
+    ],
+    "precision": 0.7059,
+    "roc_auc": 0.7299,
+    "accuracy_ci_95": [
+      0.5314,
+      0.82
+    ],
+    "confusion_matrix": [
+      [
+        13,
+        5
+      ],
+      [
+        6,
+        12
+      ]
+    ],
+    "n_samples": 36,
+    "n_patients": 18,
+    "fold_records": [
+      {
+        "test_patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.20571428571428568,
+          0.04
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.1957142857142857,
+          0.6216666666666667
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.04,
+          0.06
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.34,
+          0.1
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.5166666666666666,
+          0.97
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.92,
+          0.98
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.3485714285714286,
+          0.94
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.72,
+          0.76
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.09987179487179487,
+          0.96
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.048205128205128206,
+          0.88
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.18953846153846154,
+          0.64
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.16153846153846152,
+          0.36
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          1.0,
+          1.0
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.72,
+          0.92
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.3618181818181818,
+          0.86
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.24007905138339922,
+          0.9182608695652174
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.4022222222222222,
+          0.45111111111111113
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.3425,
+          0.42861111111111116
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      }
+    ]
+  },
+  "single_observation_raw_LR_inner_tuned": {
+    "balanced_accuracy": 0.7778,
+    "f1_score": 0.7778,
+    "sensitivity": 0.7778,
+    "sensitivity_ci_95": [
+      0.5479,
+      0.91
+    ],
+    "specificity": 0.7778,
+    "specificity_ci_95": [
+      0.5479,
+      0.91
+    ],
+    "precision": 0.7778,
+    "roc_auc": 0.8241,
+    "accuracy_ci_95": [
+      0.6192,
+      0.8828
+    ],
+    "confusion_matrix": [
+      [
+        14,
+        4
+      ],
+      [
+        4,
+        14
+      ]
+    ],
+    "n_samples": 36,
+    "n_patients": 18,
+    "fold_records": [
+      {
+        "test_patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.18800501981201506,
+          0.3639626186297282
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.40640757101782216,
+          0.5402544850961517
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.21446438994329806,
+          0.2633762388284886
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.23983615660475793,
+          0.41154798929287123
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.4792639516458574,
+          0.6436580429851394
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.547108874171055,
+          0.5899748140364612
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.47576537472947106,
+          0.6720589645702477
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.5482603133349077,
+          0.8266253992625704
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.3855595293781394,
+          0.7406654731114674
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.4086995191666125,
+          0.5991707977837886
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.3870836546679057,
+          0.6503661512683997
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.11213805087322624,
+          0.4378143040357374
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.7894030727586602,
+          0.8331554438811282
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.5133653510572707,
+          0.9579246535852769
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.35671137228941646,
+          0.770230126791052
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.4521704903697937,
+          0.6560718199077419
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.30786531006106643,
+          0.5321458716948534
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.3664094012977655,
+          0.5208952970257321
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "single_observation_raw_RF_inner_tuned": {
+    "balanced_accuracy": 0.7222,
+    "f1_score": 0.7059,
+    "sensitivity": 0.6667,
+    "sensitivity_ci_95": [
+      0.4375,
+      0.8372
+    ],
+    "specificity": 0.7778,
+    "specificity_ci_95": [
+      0.5479,
+      0.91
+    ],
+    "precision": 0.75,
+    "roc_auc": 0.7469,
+    "accuracy_ci_95": [
+      0.5601,
+      0.8415
+    ],
+    "confusion_matrix": [
+      [
+        14,
+        4
+      ],
+      [
+        6,
+        12
+      ]
+    ],
+    "n_samples": 36,
+    "n_patients": 18,
+    "fold_records": [
+      {
+        "test_patient_id": 108,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.17813017322486968,
+          0.10122541132010776
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 111,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.18320015211004578,
+          0.6750421193014072
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 113,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.023997422409032312,
+          0.023997422409032312
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 114,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.18881796444010063,
+          0.1469082467068535
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 116,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.497863751728148,
+          0.9413618747093977
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 120,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.8652785413760644,
+          0.948945208042731
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 122,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.30602380952380953,
+          0.945197691197691
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 123,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.6619187675070028,
+          0.7775609031491385
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 124,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.08285186887864235,
+          0.9416502795450161
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 125,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.08654576321959545,
+          0.8625550414497782
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 126,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.15862690464439017,
+          0.6962277649251334
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 128,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.2832439776298842,
+          0.29184053226204265
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 131,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.999047619047619,
+          0.999047619047619
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 133,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          1,
+          1
+        ],
+        "y_prob": [
+          0.5995360619346554,
+          0.9195669626383248
+        ],
+        "is_correct": [
+          false,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 134,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.40943119299001657,
+          0.8491791411203172
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 135,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          1
+        ],
+        "y_prob": [
+          0.32125921776059746,
+          0.8819490847989299
+        ],
+        "is_correct": [
+          true,
+          true
+        ]
+      },
+      {
+        "test_patient_id": 136,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.426777178987537,
+          0.4687028264395003
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      },
+      {
+        "test_patient_id": 137,
+        "y_true": [
+          0,
+          1
+        ],
+        "y_pred": [
+          0,
+          0
+        ],
+        "y_prob": [
+          0.12937350273677506,
+          0.4324941575377704
+        ],
+        "is_correct": [
+          true,
+          false
+        ]
+      }
+    ]
+  }
+}

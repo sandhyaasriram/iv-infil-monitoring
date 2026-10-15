@@ -26,7 +26,11 @@ Thumbs.db
 # Python environment and bytecode
 .venv/
 __pycache__/
+**/__pycache__/
 *.pyc
+*.pyo
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
 
 # Local docs (not for public repo)
 ARCHITECTURE.md

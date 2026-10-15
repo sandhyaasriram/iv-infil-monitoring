@@ -1,0 +1,14 @@
+Relative Path,Description,Status,Size (KB),Last Modified
+results/progressive_multimodal_corrected/corrected_metrics.json,"Current Corrected Multimodal Benchmark (Models 1, 2, 4)",Available,3.89,2026-10-15 00:19
+results/progressive_multimodal_corrected/checkpoints/model1_baseline_tcn.pt,Model 1 Causal TCN PyTorch Weights,Available,260.29,2026-10-15 00:17
+results/progressive_multimodal_corrected/checkpoints/model2_bio_tcn_simulated.pt,Model 2 Simulated Bioimpedance TCN Weights,Available,290.58,2026-10-15 00:19
+results/progressive_multimodal_corrected/checkpoints/model4_age_multi_architecture.pt,Model 4 Age-Aware Architecture Weights,Available,434.36,2026-10-15 00:19
+results/clinical_loocv_discrepancy/clinical_discrepancy_metrics.json,Clinical LOOCV Discrepancy Structured Metrics,Available,38.08,2026-10-15 01:00
+results/clinical_loocv_discrepancy/clinical_discrepancy_predictions.csv,36-Sample Patient Predictions Table (Raw vs Paired),Available,2.67,2026-10-15 01:00
+results/workstream_a/clinical_metrics.json,Workstream A Clinical Frequency & Parameter Ablations,Available,22.03,2026-10-14 20:43
+results/workstream_a/paired_ttests.json,Jeong et al. Clinical Paired t-test Statistics,Available,5.57,2026-10-14 20:43
+results/workstream_b/workstream_b_metrics.json,Workstream B Temporal Models & Shuffle Controls,Available,8.01,2026-10-14 20:43
+results/experiment_summary.json,Autonomic Dual-Stream & WESAD Confounder Benchmark,Available,6.47,2026-10-14 20:43
+results/systemic_encoder_wesad.pt,Pretrained WESAD Autonomic Stress Encoder Weights,Available,77.79,2026-10-14 20:43
+data/clinical_plos_one/Z.csv,Jeong et al. 2019 PLOS ONE Clinical Impedance Raw Table,Available,5.63,2026-10-14 20:43
+synthetic_iv_infiltration_dataset.csv,Synthetic 1 Hz Temperature & Pressure IV Trials (100 trials),Available,26457.5,2026-10-14 20:43

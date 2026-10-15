@@ -1,0 +1,9 @@
+Architecture,Macro-F1,Balanced Acc,Parameters,CPU Latency (ms),Footprint
+Threshold Baseline (Workstream B),0.325,0.364,2,0.01,< 1 KB
+Tabular Logistic Regression (Workstream B),0.9684,0.9606,44,0.05,2.1 KB
+Tabular Random Forest (Workstream B),0.9857,0.9901,~50 Trees,0.45,878 KB
+"Causal TCN (Workstream B, 50s)",0.9564,0.9527,59908,4.82,234 KB
+"Model 1: Baseline Causal TCN (Corrected, 60s)",0.9007,0.8765,59908,5.011,234.02 KB
+Model 2: Simulated Bio TCN Fusion (Corrected),0.9689,0.9622,66084,10.343,258.14 KB
+Autonomic Dual-Stream (WESAD Integrated),0.9385410190749623,0.9683,115200,8.5,450 KB
+Model 4: Age-Aware Architecture (Profiled Only),UNEVALUATED,UNEVALUATED,99702,22.342,389.46 KB

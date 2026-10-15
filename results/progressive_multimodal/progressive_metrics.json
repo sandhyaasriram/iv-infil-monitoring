@@ -1,0 +1,187 @@
+{
+  "model1_tcn": {
+    "variant_id": "model1_tcn",
+    "description": "Model 1: Baseline Causal TCN (Local Temp + Pressure)",
+    "status": "Trained & Evaluated",
+    "macro_f1_mean": 0.909,
+    "macro_f1_std": 0.0258,
+    "balanced_acc_mean": 0.8888,
+    "balanced_acc_std": 0.0372,
+    "sensitivity_mean": 0.8887,
+    "specificity_mean": 0.9756,
+    "delay_raw_mean_s": -41.83,
+    "delay_clamped_mean_s": 38.16,
+    "confounder_fpr_mean": 0.0162,
+    "confounder_fpr_std": 0.0116,
+    "per_seed": [
+      {
+        "seed": 42,
+        "macro_f1": 0.8832329094489118,
+        "balanced_acc": 0.851568009524284,
+        "sensitivity": 0.8516,
+        "specificity": 0.9695,
+        "delay_raw_mean_s": 28.43,
+        "delay_clamped_mean_s": 76.24,
+        "confounder_fpr": 0.0046,
+        "n_premature": 19
+      },
+      {
+        "seed": 101,
+        "macro_f1": 0.9348444252518625,
+        "balanced_acc": 0.9259417595569325,
+        "sensitivity": 0.9259,
+        "specificity": 0.9817,
+        "delay_raw_mean_s": -112.08,
+        "delay_clamped_mean_s": 0.08,
+        "confounder_fpr": 0.0278,
+        "n_premature": 36
+      }
+    ],
+    "profiling": {
+      "total_parameters": 59908,
+      "trainable_parameters": 59908,
+      "latency_cpu_mean_ms": 10.8,
+      "latency_cpu_std_ms": 6.326,
+      "estimated_size_kb": 234.02
+    },
+    "checkpoint_path": "results\\progressive_multimodal\\checkpoints\\model1_tcn.pt"
+  },
+  "model2_bio_tcn": {
+    "variant_id": "model2_bio_tcn",
+    "description": "Model 2: Bioimpedance-Augmented TCN (+ Bioimpedance)",
+    "status": "Trained & Evaluated",
+    "macro_f1_mean": 0.9599,
+    "macro_f1_std": 0.0009,
+    "balanced_acc_mean": 0.9515,
+    "balanced_acc_std": 0.0028,
+    "sensitivity_mean": 0.9515,
+    "specificity_mean": 0.9954,
+    "delay_raw_mean_s": -28.3,
+    "delay_clamped_mean_s": 0.0,
+    "confounder_fpr_mean": 0.0,
+    "confounder_fpr_std": 0.0,
+    "per_seed": [
+      {
+        "seed": 42,
+        "macro_f1": 0.9589561741224619,
+        "balanced_acc": 0.9486308342240546,
+        "sensitivity": 0.9486,
+        "specificity": 0.9953,
+        "delay_raw_mean_s": -28.3,
+        "delay_clamped_mean_s": 0.0,
+        "confounder_fpr": 0.0,
+        "n_premature": 37
+      },
+      {
+        "seed": 101,
+        "macro_f1": 0.9608356407196729,
+        "balanced_acc": 0.9543296536815978,
+        "sensitivity": 0.9543,
+        "specificity": 0.9956,
+        "delay_raw_mean_s": -28.3,
+        "delay_clamped_mean_s": 0.0,
+        "confounder_fpr": 0.0,
+        "n_premature": 37
+      }
+    ],
+    "profiling": {
+      "total_parameters": 66084,
+      "trainable_parameters": 66084,
+      "latency_cpu_mean_ms": 5.343,
+      "latency_cpu_std_ms": 0.413,
+      "estimated_size_kb": 258.14
+    },
+    "checkpoint_path": "results\\progressive_multimodal\\checkpoints\\model2_bio_tcn.pt"
+  },
+  "model3_stress_multi": {
+    "variant_id": "model3_stress_multi",
+    "description": "Model 3: Stress-Aware Multimodal (+ Bioimpedance + Stress)",
+    "status": "Trained & Evaluated",
+    "macro_f1_mean": 0.9234,
+    "macro_f1_std": 0.0469,
+    "balanced_acc_mean": 0.9203,
+    "balanced_acc_std": 0.0466,
+    "sensitivity_mean": 0.9203,
+    "specificity_mean": 0.98,
+    "delay_raw_mean_s": -47.91,
+    "delay_clamped_mean_s": 20.59,
+    "confounder_fpr_mean": 0.0,
+    "confounder_fpr_std": 0.0,
+    "per_seed": [
+      {
+        "seed": 42,
+        "macro_f1": 0.9703241630269263,
+        "balanced_acc": 0.9669403201805994,
+        "sensitivity": 0.9669,
+        "specificity": 0.9954,
+        "delay_raw_mean_s": -28.3,
+        "delay_clamped_mean_s": 0.0,
+        "confounder_fpr": 0.0,
+        "n_premature": 37
+      },
+      {
+        "seed": 101,
+        "macro_f1": 0.8765700216706529,
+        "balanced_acc": 0.8736998611929602,
+        "sensitivity": 0.8737,
+        "specificity": 0.9647,
+        "delay_raw_mean_s": -67.51,
+        "delay_clamped_mean_s": 41.19,
+        "confounder_fpr": 0.0,
+        "n_premature": 33
+      }
+    ],
+    "profiling": {
+      "total_parameters": 98086,
+      "trainable_parameters": 98086,
+      "latency_cpu_mean_ms": 6.551,
+      "latency_cpu_std_ms": 1.557,
+      "estimated_size_kb": 383.15
+    },
+    "checkpoint_path": "results\\progressive_multimodal\\checkpoints\\model3_stress_multi.pt"
+  },
+  "model4_age_multi": {
+    "variant_id": "model4_age_multi",
+    "description": "Model 4: Age-Aware Multimodal Neural Model (+ Age Feature Encoder)",
+    "status": "Architectural Implementation Verified & Profiled (Empirical Performance Unevaluated)",
+    "empirical_evaluation_note": "Individual patient age data are unavailable in both the clinical PLOS ONE impedance dataset (anonymized patient IDs only; geriatric long-term care cohort) and the synthetic IV dataset. In accordance with scientific integrity guidelines, age values were not fabricated. The modular AgeFeatureEncoder interface, fusion pathways, and forward pass were verified, and computational overhead was benchmarked.",
+    "profiling": {
+      "total_parameters": 99702,
+      "trainable_parameters": 99702,
+      "latency_cpu_mean_ms": 9.835,
+      "latency_cpu_std_ms": 2.624,
+      "estimated_size_kb": 389.46
+    },
+    "checkpoint_path": "results\\progressive_multimodal\\checkpoints\\model4_age_multi.pt"
+  },
+  "modality_ablations": {
+    "tcn_only": {
+      "name": "Temp + Pressure Only (Model 1)",
+      "macro_f1_mean": 0.909,
+      "macro_f1_std": 0.0258,
+      "confounder_fpr_mean": 0.0162,
+      "confounder_fpr_std": 0.0116
+    },
+    "tcn_plus_bio": {
+      "name": "Temp + Pressure + Bioimpedance (Model 2)",
+      "macro_f1_mean": 0.9599,
+      "macro_f1_std": 0.0009,
+      "confounder_fpr_mean": 0.0,
+      "confounder_fpr_std": 0.0
+    },
+    "full_multimodal": {
+      "name": "Temp + Pressure + Bioimpedance + Stress (Model 3)",
+      "macro_f1_mean": 0.9234,
+      "macro_f1_std": 0.0469,
+      "confounder_fpr_mean": 0.0,
+      "confounder_fpr_std": 0.0
+    },
+    "tcn_plus_stress": {
+      "name": "Temp + Pressure + Stress (Dual-Stream)",
+      "macro_f1_mean": 0.8389,
+      "macro_f1_std": 0.0068,
+      "confounder_fpr_mean": 0.0,
+      "confounder_fpr_std": 0.0
+    }
+  }
+}
